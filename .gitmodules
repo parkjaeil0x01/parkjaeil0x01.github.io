@@ -4,7 +4,7 @@
 	branch = publish
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
+	url = git@github.com-parkjaeil0x01:parkjaeil0x01/hugo-PaperMod
 [submodule "content/post"]
 	path = content/post
 	url = git@github.com-parkjaeil0x01:parkjaeil0x01/til
