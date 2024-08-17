@@ -6,7 +6,14 @@
     <description>Recent content on ParkJaeil</description>
     <generator>Hugo -- 0.132.2</generator>
     <language>en</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 11:30:03 +0000</lastBuildDate>
     <atom:link href="https://parkjaeil0x01.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My 1st post</title>
+      <link>https://parkjaeil0x01.github.io/blog/%ED%85%8C%EC%8A%A4%ED%8A%B82/</link>
+      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
+      <guid>https://parkjaeil0x01.github.io/blog/%ED%85%8C%EC%8A%A4%ED%8A%B82/</guid>
+      <description>Desc Text.</description>
+    </item>
   </channel>
 </rss>
