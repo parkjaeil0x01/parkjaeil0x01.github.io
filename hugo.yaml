@@ -144,13 +144,13 @@ params:
     keys: ["title"] # ["title", "permalink", "summary", "content"]
 
   # for comments
-#  utteranc:
-#    enable: true
-#    repo: "minyeamer/til"
-#    issueTerm: "pathname"
-#    label: "comments"
-#    theme: "preferred-color-scheme"
-#    crossorigin: "anonymous"
+  utteranc:
+    enable: true
+    repo: "parkjaeil0x01/til"
+    issueTerm: "pathname"
+    label: "comments"
+    theme: "preferred-color-scheme"
+    crossorigin: "anonymous"
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
