@@ -12,26 +12,36 @@ cd public
 # Add changes to git.
 git add .
 
-# Commit changes.
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
+# Check for changes and commit if there are any
+if ! git diff-index --quiet HEAD; then
+  msg="rebuilding site `date`"
+  if [ $# -eq 1 ]; then
+    msg="$1"
+  fi
+  git commit -m "$msg"
+  
+  # Push source and build repos.
+  git push origin publish
+else
+  echo "No changes to commit in 'public' directory."
 fi
-git commit -m "$msg"
-
-# Push source and build repos.
-git push origin publish
 
 # Come back up to the project root
 cd ..
 
-# Commit and push to post branch
+# Add changes to git.
 git add .
 
-msg="rebuilding site `date`"
-if [ $# -eq 1 ]
-  then msg="$1"
+# Check for changes and commit if there are any
+if ! git diff-index --quiet HEAD; then
+  msg="rebuilding site `date`"
+  if [ $# -eq 1 ]; then
+    msg="$1"
+  fi
+  git commit -m "$msg"
+  
+  # Push source and build repos.
+  git push origin post
+else
+  echo "No changes to commit in the project root directory."
 fi
-git commit -m "$msg"
-
-git push origin post
