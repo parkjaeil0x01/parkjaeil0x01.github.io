@@ -14,7 +14,7 @@ git add .
 
 # Check for changes and commit if there are any
 if ! git diff-index --quiet HEAD; then
-  msg="rebuilding site `date`"
+  msg="====== rebuilding site `date`"
   if [ $# -eq 1 ]; then
     msg="$1"
   fi
@@ -37,7 +37,7 @@ git add .
 
 # Check for changes and commit if there are any
 if ! git diff-index --quiet HEAD; then
-  msg="rebuilding post `date`"
+  msg="====== rebuilding post `date`"
   if [ $# -eq 1 ]; then
     msg="$1"
   fi
@@ -57,7 +57,7 @@ git add .
 
 # Check for changes and commit if there are any
 if ! git diff-index --quiet HEAD; then
-  msg="rebuilding site `date`"
+  msg="====== rebuilding site `date`"
   if [ $# -eq 1 ]; then
     msg="$1"
   fi
