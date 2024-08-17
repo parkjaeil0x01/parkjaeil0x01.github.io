@@ -6,8 +6,9 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # hugo -t <your theme>
 hugo -t PaperMod
 
-# Go to public folder, submodule commit
+# Go to public folder, submodule 'publish' commit
 cd public
+
 # Add changes to git.
 git add .
 
@@ -24,7 +25,7 @@ git push origin publish
 # Come back up to the project root
 cd ..
 
-# Commit and push to main branch
+# Commit and push to post branch
 git add .
 
 msg="rebuilding site `date`"
