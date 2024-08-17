@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = git@github.com-parkjaeil0x01:parkjaeil0x01/parkjaeil0x01.github.io
+	branch = publish
