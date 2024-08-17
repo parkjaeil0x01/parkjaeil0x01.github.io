@@ -40,7 +40,7 @@ params:
   title: ParkJaeil
   description: "ParkJaeil's Tech Blog"
   keywords: ["parkjaeil", "Blog", "Data", "Engineering", "DevOps", "개발", "박재일", "블로그"]
-  author: minyeamer
+  author: parkjaeil0x01
   # author: ["Me", "You"] # multiple authors
   #images: ["https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true"] # "<link or path of image for opengraph, twitter-cards>"
   DateFormat: "January 2, 2006"
