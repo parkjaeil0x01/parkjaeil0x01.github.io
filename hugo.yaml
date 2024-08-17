@@ -1,3 +1,181 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseURL: "https://parkjaeil0x01.github.io/"
+title: ParkJaeil
+paginate: 5
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+#googleAnalytics: G-BWECRMSX3V
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: archive
+      name: Archive
+      url: /archive/
+      weight: 10
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 20
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 40
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: ParkJaeil
+  description: "ParkJaeil's Tech Blog"
+  keywords: ["parkjaeil", "Blog", "Data", "Engineering", "DevOps", "개발", "박재일", "블로그"]
+  author: minyeamer
+  # author: ["Me", "You"] # multiple authors
+  #images: ["https://github.com/minyeamer/til/blob/main/.media/main/thumbnail.png?raw=true"] # "<link or path of image for opengraph, twitter-cards>"
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: true
+
+  mainsections: ["page", "post", "archive", "search"]
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/img/favicons/favicon.ico"
+    favicon16x16: "/img/favicons/favicon-16x16.png"
+    favicon32x32: "/img/favicons/favicon-32x32.png"
+    apple_touch_icon: "/img/favicons/apple-touch-icon.png"
+    safari_pinned_tab: "/img/favicons/apple-touch-icon.png"
+
+  # home-info mode
+  homeInfoParams:
+    Title: ParkJaeil's Tech Blog
+    Content: "DevOps의 시작과 끝"
+
+  socialIcons:
+    - name: email
+      url: "https://mail.google.com/mail/?view=cm&source=mailto&to=parkjaeil@htbeyond.com"
+#    - name: linkedin
+#      url: "https://www.linkedin.com/in/minyeob-kim-a0b65b230/"
+#    - name: hackerrank
+#      url: "https://www.hackerrank.com/minyeamer"
+    - name: github
+      url: "https://github.com/parkjaeil0x01"
+
+  label:
+    text: "Parkjaeil-Label"
+#    icon: "/apple-touch-icon.png"
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
+    title: ExampleSite
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
+
+#  analytics:
+#    google:
+#      SiteVerificationTag: "u1tWcHmHUZWfFT1cHaku6sqU-bK40N3WLR-C-4VUWN0"
+#    naver:
+#      SiteVerificationTag: "6eaf8e9da1a6104780f056f1a7797fe5a3a5a0da"
+    # bing:
+    #   SiteVerificationTag: "XYZabc"
+    # yandex:
+    #   SiteVerificationTag: "XYZabc"
+
+  cover:
+    prefix: "https://github.com/parkjaeil0x01/til/blob/main/.media/covers/"
+    suffix: "?raw=true"
+    # hidden: true # hide everywhere but not in structured data
+    # hiddenInList: true # hide on list pages and home
+    # hiddenInSingle: true # hide on single page
+
+#  editPost:
+#    URL: "https://github.com/minyeamer/til/edit/main"
+#    Text: "Suggest Changes" # edit text
+#    appendFilePath: true # to append file path to Edit link
+#    ignoreFilePath: "post/" # to ignore specific file path from Edit link
+
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title"] # ["title", "permalink", "summary", "content"]
+
+  # for comments
+#  utteranc:
+#    enable: true
+#    repo: "minyeamer/til"
+#    issueTerm: "pathname"
+#    label: "comments"
+#    theme: "preferred-color-scheme"
+#    crossorigin: "anonymous"
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    # anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    style: monokai
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 1
+    endLevel: 3
+
+permalinks:
+  post: /blog/:slugorfilename/
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+ignoreFiles: ["_page.md", "README.md"]
