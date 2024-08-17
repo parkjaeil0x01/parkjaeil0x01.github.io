@@ -19,7 +19,7 @@ if ! git diff-index --quiet HEAD; then
     msg="$1"
   fi
   git commit -m "$msg"
-  
+
   # Push source and build repos.
   git push origin publish
 else
@@ -29,7 +29,30 @@ fi
 # Come back up to the project root
 cd ..
 
+# Go to content/post folder, add changes to git.
+cd content/post
+
 # Add changes to git.
+git add .
+
+# Check for changes and commit if there are any
+if ! git diff-index --quiet HEAD; then
+  msg="rebuilding post `date`"
+  if [ $# -eq 1 ]; then
+    msg="$1"
+  fi
+  git commit -m "$msg"
+
+  # Push post changes.
+  git push origin post
+else
+  echo "No changes to commit in 'content/post' directory."
+fi
+
+# Come back up to the project root
+cd ../..
+
+# Add changes to git in the project root.
 git add .
 
 # Check for changes and commit if there are any
@@ -39,7 +62,7 @@ if ! git diff-index --quiet HEAD; then
     msg="$1"
   fi
   git commit -m "$msg"
-  
+
   # Push source and build repos.
   git push origin post
 else
