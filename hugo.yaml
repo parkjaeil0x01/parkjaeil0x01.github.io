@@ -120,7 +120,7 @@ params:
     #   SiteVerificationTag: "XYZabc"
 
   cover:
-    prefix: "https://github.com/parkjaeil0x01/til/blob/main/.media/covers/"
+    prefix: "https://github.com/parkjaeil0x01/til/blob/prod/.media/covers/"
     suffix: "?raw=true"
     # hidden: true # hide everywhere but not in structured data
     # hiddenInList: true # hide on list pages and home
